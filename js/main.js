@@ -20,7 +20,7 @@ window.onload = function() {
 	    game.load.image('sky', 'assets/sky.png');
 	    game.load.image('ground', 'assets/platform.png');
 	    game.load.image('star', 'assets/star.png');
-	    game.load.spritesheet('dog', 'assets/dog_brown_0.xcf', 46, 27);
+	    game.load.spritesheet('dog', 'assets/dog_brown_0.png', 46, 27);
 
 	}
 
@@ -63,7 +63,7 @@ window.onload = function() {
 	    ledge.body.immovable = true;
 
 	    // The player and its settings
-	    player = game.add.sprite(32, game.world.height - 150, 'dog');
+	    player = game.add.sprite(32, game.world.height - 100, 'dog');
 
 	    //  We need to enable physics on the player
 	    game.physics.arcade.enable(player);
