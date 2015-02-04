@@ -64,7 +64,7 @@ window.onload = function() {
 
 	    // The player and its settings
 	    player = game.add.sprite(32, game.world.height - 100, 'dog');
-
+		player.anchor.setTo(0.5,0.5);
 	    //  We need to enable physics on the player
 	    game.physics.arcade.enable(player);
 
@@ -75,7 +75,7 @@ window.onload = function() {
 
 	    //  Our two animations, walking left and right.
 	    player.animations.add('left', [0, 1, 2], 10, true);
-	    player.animations.add('right', [2, 1, 0], 10, true);
+	    player.animations.add('right', [0, 1, 2], 10, true);
 
 	    //  Finally some stars to collect
 	    stars = game.add.group();
@@ -121,12 +121,16 @@ window.onload = function() {
 		//  Move to the left
 		player.body.velocity.x = -150;
 
+		player.scale.x = 1;
+
 		player.animations.play('left');
 	    }
 	    else if (cursors.right.isDown)
 	    {
 		//  Move to the right
 		player.body.velocity.x = 150;
+
+		player.scale.x = -1;
 
 		player.animations.play('right');
 	    }
