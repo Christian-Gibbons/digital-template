@@ -135,7 +135,7 @@ window.onload = function() {
 		//  Stand still
 		player.animations.stop();
 
-		player.frame = 0;
+		player.frame = 3;
 	    }
 	    
 	    //  Allow the player to jump if they are touching the ground.
