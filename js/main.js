@@ -73,9 +73,10 @@ window.onload = function() {
 	    player.body.gravity.y = 300;
 	    player.body.collideWorldBounds = true;
 
-	    //  Our two animations, walking left and right.
+	    //  Our two animations, walking and peeing.
 	    player.animations.add('walk', [0, 1, 2], 10, true);
-		player.animations.add('piss', [5, 6], 10, true);
+		player.animations.add('piss', [3, 4], 10, true);
+
 	    //  Finally some stars to collect
 	    stars = game.add.group();
 
@@ -144,8 +145,8 @@ window.onload = function() {
 	    //  Allow the player to jump if they are touching the ground.
 	    if (cursors.up.isDown && player.body.touching.down)
 	    {
-		player.body.velocity.y = -350;
-		//player.animations.play('piss');
+		//player.body.velocity.y = -350;
+		player.animations.play('piss');
 	    }
 
 	}
