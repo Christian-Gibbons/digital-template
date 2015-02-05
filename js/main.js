@@ -101,7 +101,7 @@ window.onload = function() {
 
 	    //  Our controls.
 	    cursors = game.input.keyboard.createCursorKeys();
-	    jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+//	    jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
 	}
 
