@@ -74,8 +74,7 @@ window.onload = function() {
 	    player.body.collideWorldBounds = true;
 
 	    //  Our two animations, walking left and right.
-	    player.animations.add('left', [0, 1, 2], 10, true);
-	    player.animations.add('right', [0, 1, 2], 10, true);
+	    player.animations.add('walk', [0, 1, 2], 10, true);
 
 	    //  Finally some stars to collect
 	    stars = game.add.group();
@@ -123,7 +122,7 @@ window.onload = function() {
 
 		player.scale.x = 1;
 
-		player.animations.play('left');
+		player.animations.play('walk');
 	    }
 	    else if (cursors.right.isDown)
 	    {
@@ -132,14 +131,14 @@ window.onload = function() {
 
 		player.scale.x = -1;
 
-		player.animations.play('right');
+		player.animations.play('walk');
 	    }
 	    else
 	    {
 		//  Stand still
 		player.animations.stop();
 
-		player.frame = 0;
+		player.frame = 0; //figure this out
 	    }
 	    
 	    //  Allow the player to jump if they are touching the ground.
