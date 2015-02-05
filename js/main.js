@@ -140,7 +140,7 @@ window.onload = function() {
 		//  Stand still
 		player.animations.stop();
 
-		player.frame = 5; //figure this out
+		player.frame = 4; //figure this out
 	    }
 
 	    if (jumpButton.isDown && player.body.touching.down)
