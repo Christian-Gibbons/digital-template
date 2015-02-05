@@ -76,7 +76,6 @@ window.onload = function() {
 	    //  Our two animations, walking left and right.
 	    player.animations.add('walk', [0, 1, 2], 10, true);
 		player.animations.add('piss', [5, 6], 10, true);
-
 	    //  Finally some stars to collect
 	    stars = game.add.group();
 
@@ -101,7 +100,7 @@ window.onload = function() {
 
 	    //  Our controls.
 	    cursors = game.input.keyboard.createCursorKeys();
-	    jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+	    
 	}
 
 	function update() {
@@ -141,15 +140,11 @@ window.onload = function() {
 
 		player.frame = 0; //figure this out
 	    }
-		// Allow the player to jump if they are touching the ground.
-	    if (jumpButton.isDown && player.body.touching.down)
-	    {
-		player.body.velocity.y = -350;
-	    }	    
-
-	    //  Allow the player to piss if they are touching the ground.
+	    
+	    //  Allow the player to jump if they are touching the ground.
 	    if (cursors.up.isDown && player.body.touching.down)
 	    {
+		//player.body.velocity.y = -350;
 		player.animations.play('piss');
 	    }
 
