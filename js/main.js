@@ -101,7 +101,8 @@ window.onload = function() {
 
 	    //  Our controls.
 	    cursors = game.input.keyboard.createCursorKeys();
-	    
+	    jumpButton = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+
 	}
 
 	function update() {
@@ -141,7 +142,13 @@ window.onload = function() {
 
 		player.frame = 0; //figure this out
 	    }
-	    
+
+		// Allow player to jump if they are touching the ground.
+	    if (jumpButton.isDown && player.body.touching.down)
+	    {
+		player.body.velocity.y = -350;
+	    }	    
+
 	    //  Allow the player to jump if they are touching the ground.
 	    if (cursors.up.isDown && player.body.touching.down)
 	    {
