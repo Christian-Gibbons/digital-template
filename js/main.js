@@ -75,7 +75,7 @@ window.onload = function() {
 
 	    //  Our two animations, walking and peeing.
 	    player.animations.add('walk', [0, 1, 2], 10, true);
-		player.animations.add('piss', [3, 4], 10, true);
+		player.animations.add('piss', [4, 5], 10, true);
 
 	    //  Finally some stars to collect
 	    stars = game.add.group();
