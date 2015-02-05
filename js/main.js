@@ -135,6 +135,13 @@ window.onload = function() {
 
 		player.animations.play('walk');
 	    }
+	    //  Allow the player to jump if they are touching the ground.
+	    else if (cursors.up.isDown && player.body.touching.down)
+	    {
+		//player.body.velocity.y = -350;
+		player.animations.play('piss');
+	    }
+
 	    else
 	    {
 		//  Stand still
@@ -149,12 +156,7 @@ window.onload = function() {
 		player.body.velocity.y = -350;
 	    }	    
 
-	    //  Allow the player to jump if they are touching the ground.
-	    if (cursors.up.isDown && player.body.touching.down)
-	    {
-		//player.body.velocity.y = -350;
-		player.animations.play('piss');
-	    }
+
 
 	}
 
